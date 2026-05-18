@@ -72,20 +72,31 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
 .fn{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.1em;color:var(--taupe-dark)}
 .fn a{color:var(--taupe-dark);text-decoration:none;transition:color 0.2s}.fn a:hover{color:var(--taupe)}
 
+
+}
+
 @media(max-width:768px){
   nav{padding:1.2rem 1.5rem}
-  .nav-links{gap:1.2rem}
-  .nav-links a{font-size:0.6rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:0.58rem;letter-spacing:0.1em}
   .page-hero{padding:7rem 1.5rem 4rem}
-  .page-title{font-size:clamp(2.5rem,10vw,4rem)}
-  .cards{padding:3rem 1.5rem 5rem}
-  .card{padding:2rem 1.5rem}
-  .preview{height:140px}
-  .cfoot{flex-wrap:wrap;gap:0.75rem}
+  .page-title{font-size:clamp(2.2rem,10vw,3.5rem)}
+  .page-desc{font-size:0.8rem}
+  .cards{grid-template-columns:1fr !important;padding:2.5rem 1.5rem 5rem}
+  .card{padding:0 !important}
+  .card-top{padding:1.4rem 1.5rem}
+  .cbody{padding:1.5rem !important;display:flex !important;flex-direction:column !important;grid-template-columns:unset !important}
+  .cbody > div{padding-left:0 !important;border-left:none !important}
+  .ctitle{font-size:1.2rem}
+  .csum{font-size:0.75rem}
+  .cfoot{flex-wrap:wrap;gap:0.75rem;padding:1.2rem 1.5rem}
+  .cdl{font-size:0.6rem;padding:0.6rem 1.2rem}
+  .preview{height:160px}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
 }
 @media(max-width:480px){
-  .page-title{font-size:clamp(2rem,12vw,3rem)}
+  .page-title{font-size:clamp(1.8rem,12vw,2.8rem)}
+  .nav-links a{font-size:0.52rem}
 }
 </style>
 </head>
@@ -158,60 +169,6 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
       </div>
     </div>
 
-    <!-- Mock Political Campaign -->
-    <div class="card reveal d2">
-      <div class="preview">
-        <!--
-          PREVIEW IMAGE: Replace with campaign screenshot or postcard image.
-          You have the mock election postcard image from your Wix gallery.
-        -->
-        <div class="preview-ph">
-          <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-          <span>Campaign image — add screenshot</span>
-        </div>
-        <span class="preview-label">Campaign Strategy</span>
-      </div>
-      <div class="cbody">
-        <p class="cdate">2022–2023</p>
-        <h3 class="ctitle">Mock Political Campaign</h3>
-        <p class="csubj">Full-cycle campaign design · Strategy · Visual Identity</p>
-        <p class="csum">Collaborative design and execution of a complete mock political campaign strategy — covering candidate positioning, voter targeting, messaging architecture, visual identity, and campaign materials including postcards and digital assets. Demonstrates applied understanding of political communication and electoral strategy.</p>
-        <div class="ctags"><span class="tag">Campaign Strategy</span><span class="tag">Political Communication</span><span class="tag">Visual Design</span><span class="tag">Strategic Communications</span></div>
-      </div>
-      <div class="cfoot" style="flex-wrap:wrap;gap:0.75rem">
-        <a href="images/bray-1.png" target="_blank" class="cdl live" style="font-size:0.58rem;padding:0.5rem 1rem">Photo 1</a>
-        <a href="images/bray-2.png" target="_blank" class="cdl live" style="font-size:0.58rem;padding:0.5rem 1rem;background:transparent;color:var(--taupe-light);border:0.5px solid var(--rd)">Photo 2</a>
-        <a href="images/bray-3.png" target="_blank" class="cdl live" style="font-size:0.58rem;padding:0.5rem 1rem;background:transparent;color:var(--taupe-light);border:0.5px solid var(--rd)">Photo 3</a>
-        <a href="images/bray-4.png" target="_blank" class="cdl live" style="font-size:0.58rem;padding:0.5rem 1rem;background:transparent;color:var(--taupe-light);border:0.5px solid var(--rd)">Photo 4</a>
-        <span class="cref">WVWC · Art of the Election</span>
-      </div>
-    </div>
-
-    <!-- DA International Branding -->
-    <div class="card reveal d3">
-      <div class="preview">
-        <!--
-          PREVIEW IMAGE: Replace with a screenshot of the DA International brand materials.
-          You have images from this project in your Wix gallery.
-        -->
-        <div class="preview-ph">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-          <span>Brand materials — add image</span>
-        </div>
-        <span class="preview-label">Brand Identity</span>
-      </div>
-      <div class="cbody">
-        <p class="cdate">2023–2024</p>
-        <h3 class="ctitle">DA International Branding &amp; Marketing Overhaul</h3>
-        <p class="csubj">Brand Identity · Content Strategy · Visual Redesign</p>
-        <p class="csum">Comprehensive content and design overhaul for DA International — an organization operating across borders — to strengthen brand identity and improve client communication. Involved redesigning visual assets, restructuring messaging, and developing a cohesive content strategy aligned with organizational goals and target audiences.</p>
-        <div class="ctags"><span class="tag">Brand Identity</span><span class="tag">Content Strategy</span><span class="tag">Visual Design</span><span class="tag">Marketing</span><span class="tag">Communications</span></div>
-      </div>
-      <div class="cfoot">
-        <a href="pdfs/da-international.pdf" class="cdl live">Download Prequalification</a>
-        <span class="cref">DA International</span>
-      </div>
-    </div>
 
   </div>
 </div>
