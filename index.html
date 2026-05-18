@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeinah Abdelsalam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --taupe:#9C8F82;--taupe-light:#C4B9B0;--taupe-dark:#6B5F55;
+  --cream:#F5F1EC;--cream-dark:#EDE7DF;--cream-mid:#EAE4DC;
+  --ink:#1A1614;--ink-mid:#3D3530;--ink-light:#6B6260;
+  --white:#FDFBF9;
+  --rd:rgba(156,143,130,0.18);--rs:rgba(156,143,130,0.4);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--ink);color:var(--cream);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 4rem;background:rgba(26,22,20,0.93);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--rd)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.2rem;color:var(--cream);text-decoration:none;letter-spacing:0.02em}
+.nav-links{display:flex;gap:2.8rem;list-style:none}
+.nav-links a{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--taupe);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--cream)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:4.5rem;background:var(--ink)}
+.hero-img-col{position:relative;overflow:hidden}
+.hero-img-col img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--ink) 100%)}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:6rem 5rem 6rem 4rem;position:relative}
+.hero-eyebrow{font-family:'Jost',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--taupe);margin-bottom:2rem;display:flex;align-items:center;gap:1rem}
+.hero-eyebrow::before{content:'';width:2rem;height:0.5px;background:var(--taupe-dark)}
+.hero-name{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:0.92;margin-bottom:2.5rem}
+.hero-name .first{display:block;font-size:clamp(3.8rem,7.5vw,7rem);letter-spacing:0.06em;color:var(--cream)}
+.hero-name .last{display:block;font-size:clamp(3.8rem,7.5vw,7rem);font-style:italic;color:var(--taupe);letter-spacing:0.01em}
+.hero-rule{width:3rem;height:0.5px;background:var(--taupe-dark);margin-bottom:2rem}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.2rem;color:var(--taupe-light);line-height:1.65;max-width:28rem;margin-bottom:2.5rem}
+.hero-domains{font-family:'Jost',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--taupe-dark);line-height:2.2}
+.hero-cta{margin-top:3rem;display:flex;gap:1.5rem;align-items:center}
+.btn-p{font-family:'Jost',sans-serif;font-weight:400;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);background:var(--taupe-light);border:1px solid var(--taupe-light);padding:0.85rem 2.2rem;text-decoration:none;transition:all 0.25s}
+.btn-p:hover{background:var(--cream);border-color:var(--cream)}
+.btn-g{font-family:'Jost',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--taupe);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.2s}
+.btn-g .arr{transition:transform 0.2s;display:inline-block}
+.btn-g:hover{color:var(--cream)}.btn-g:hover .arr{transform:translateX(5px)}
+
+/* WELCOME */
+.welcome{background:rgba(156,143,130,0.06);padding:4.5rem 4rem;display:grid;grid-template-columns:1fr 1px 2fr;gap:4rem;align-items:center;border-top:0.5px solid var(--rd);border-bottom:0.5px solid var(--rd)}
+.welcome-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:2.8rem;color:var(--taupe);text-align:right}
+.welcome-div{background:var(--rd);align-self:stretch}
+.welcome-body{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.1rem;line-height:1.75;color:var(--taupe-light)}
+.welcome-body a{font-family:'Jost',sans-serif;font-style:normal;font-weight:400;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);background:var(--taupe-light);padding:0.7rem 1.6rem;text-decoration:none;display:inline-block;margin-top:1.5rem;transition:background 0.2s}
+.welcome-body a:hover{background:var(--cream)}
+
+/* SECTION CHROME */
+.wrap{max-width:1380px;margin:0 auto}
+.sh{display:flex;align-items:center;gap:1.5rem;margin-bottom:4rem}
+.sn{font-family:'Jost',sans-serif;font-weight:200;font-size:0.62rem;letter-spacing:0.22em}
+.st{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;white-space:nowrap}
+.sr{flex:1;height:0.5px}
+.dark-chrome .sn,.dark-chrome .st{color:var(--taupe-dark)}
+.dark-chrome .sr{background:var(--rd)}
+.light-chrome .sn,.light-chrome .st{color:var(--taupe)}
+.light-chrome .sr{background:var(--rs)}
+
+/* ABOUT */
+#about{padding:8rem 4rem;background:var(--ink)}
+.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:6rem;align-items:start}
+.about-photo{position:relative}
+.about-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block}
+.about-badge{position:absolute;bottom:-1.2rem;right:-1.2rem;background:rgba(156,143,130,0.1);border:0.5px solid var(--rd);padding:1rem 1.4rem;backdrop-filter:blur(8px)}
+.about-badge p{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--taupe);line-height:1.9}
+.about-content h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:3.2rem;line-height:1.08;color:var(--cream);margin-bottom:2rem}
+.about-content h2 em{font-style:italic;color:var(--taupe)}
+.about-content p{font-family:'Jost',sans-serif;font-weight:300;font-size:0.87rem;line-height:1.85;color:rgba(196,185,176,0.7);margin-bottom:1.2rem}
+.about-content p em{font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--taupe-light)}
+.about-meta{margin-top:2.5rem;padding-top:2rem;border-top:0.5px solid var(--rd);display:grid;grid-template-columns:1fr 1fr;gap:1.8rem}
+.mi{display:flex;flex-direction:column;gap:0.35rem}
+.ml{font-family:'Jost',sans-serif;font-weight:300;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--taupe-dark)}
+.mv{font-family:'Jost',sans-serif;font-weight:400;font-size:0.78rem;color:var(--taupe-light);line-height:1.5}
+.mv a{color:var(--taupe-light);text-decoration:none;transition:color 0.2s}.mv a:hover{color:var(--cream)}
+
+/* EDUCATION */
+#education{background:var(--cream);padding:8rem 4rem}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);border:0.5px solid var(--rs)}
+.edu-item{padding:3rem;border-right:0.5px solid var(--rs)}
+.edu-item:last-child{border-right:none}
+.edu-pip{width:32px;height:32px;border:0.5px solid var(--taupe-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:2rem}
+.edu-pip-dot{width:6px;height:6px;border-radius:50%;background:var(--taupe)}
+.edu-degree{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.35rem;color:var(--ink);line-height:1.2;margin-bottom:0.5rem}
+.edu-school{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--taupe);margin-bottom:1.5rem}
+.edu-detail{font-family:'Jost',sans-serif;font-weight:300;font-size:0.73rem;color:var(--ink-light);line-height:1.85}
+
+/* PROJECTS */
+#projects{padding:8rem 4rem;background:var(--ink)}
+.proj-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.15rem;color:var(--taupe);max-width:44rem;line-height:1.75;margin-bottom:4.5rem}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.proj-card{background:rgba(156,143,130,0.06);padding:2.8rem 2.5rem;text-decoration:none;display:block;position:relative;border:0.5px solid var(--rd);overflow:hidden;transition:background 0.28s}
+.proj-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--taupe);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+.proj-card:hover{background:rgba(156,143,130,0.12)}.proj-card:hover::after{transform:scaleX(1)}
+.proj-icon{width:52px;height:52px;border-radius:50%;border:0.5px solid var(--rd);background:rgba(156,143,130,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:2rem}
+.proj-icon svg{width:22px;height:22px;stroke:var(--taupe);fill:none;stroke-width:1.2}
+.proj-num{font-family:'Jost',sans-serif;font-weight:200;font-size:0.6rem;letter-spacing:0.2em;color:var(--taupe-dark);margin-bottom:0.75rem}
+.proj-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.55rem;color:var(--cream);line-height:1.15;margin-bottom:1rem}
+.proj-desc{font-family:'Jost',sans-serif;font-weight:300;font-size:0.75rem;color:rgba(196,185,176,0.65);line-height:1.75;margin-bottom:2rem}
+.proj-count{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--taupe-dark);margin-bottom:1.5rem;padding-top:1.2rem;border-top:0.5px solid var(--rd)}
+.proj-cta{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--taupe);display:flex;align-items:center;gap:0.5rem;transition:gap 0.2s}
+.proj-card:hover .proj-cta{gap:0.8rem}
+
+/* HONORS */
+#honors{background:var(--cream-dark);padding:8rem 4rem;border-top:0.5px solid var(--rs);border-bottom:0.5px solid var(--rs)}
+.hon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.hon-item{padding:2.2rem 2rem 2.2rem 0;border-top:0.5px solid var(--rs)}
+.hon-year{font-family:'Jost',sans-serif;font-weight:200;font-size:0.6rem;letter-spacing:0.2em;color:var(--taupe-light);margin-bottom:0.65rem}
+.hon-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.05rem;color:var(--ink);line-height:1.3;margin-bottom:0.65rem}
+.hon-desc{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;color:var(--ink-light);line-height:1.65}
+
+/* WRITING */
+#writing{padding:8rem 4rem;background:var(--ink)}
+.writing-list{border-top:0.5px solid var(--rd)}
+.wr{display:grid;grid-template-columns:9rem 1fr auto;gap:3rem;align-items:center;padding:1.8rem 0;border-bottom:0.5px solid var(--rd);text-decoration:none;color:inherit;transition:all 0.2s}
+.wr:hover{background:rgba(156,143,130,0.06);padding:1.8rem 2rem;margin:0 -2rem}
+.wr-src{font-family:'Jost',sans-serif;font-weight:300;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--taupe-dark)}
+.wr-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.12rem;color:var(--taupe-light);line-height:1.35}
+.wr:hover .wr-title{color:var(--cream)}
+.wr-tag{font-family:'Jost',sans-serif;font-weight:300;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--taupe-dark);border:0.5px solid var(--rd);padding:0.28rem 0.75rem;white-space:nowrap}
+
+/* GALLERY */
+#gallery{background:var(--cream);padding:8rem 4rem;border-top:0.5px solid var(--rs)}
+.gallery-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.15rem;color:var(--ink-light);max-width:44rem;line-height:1.75;margin-bottom:4rem}
+.gallery-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem}
+.gallery-tile{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--cream-dark);border:0.5px solid var(--rs);cursor:pointer;transition:transform 0.3s}
+.gallery-tile:hover{transform:scale(1.02)}
+.gallery-tile img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);transition:filter 0.3s,transform 0.4s}
+.gallery-tile:hover img{filter:grayscale(0%);transform:scale(1.04)}
+.tile-caption{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(26,22,20,0.75) 0%,transparent 100%);opacity:0;transition:opacity 0.3s;display:flex;flex-direction:column;gap:0.2rem}
+.gallery-tile:hover .tile-caption{opacity:1}
+.caption-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.56rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--taupe-light)}
+.caption-text{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:0.9rem;color:var(--cream);line-height:1.2}
+.gallery-footer{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:0.5px solid var(--rs)}
+.gallery-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1rem;color:var(--ink-light)}
+.btn-gallery{font-family:'Jost',sans-serif;font-weight:400;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:0.85rem 2.2rem;text-decoration:none;transition:background 0.25s;display:inline-flex;align-items:center;gap:0.75rem}
+.btn-gallery:hover{background:var(--taupe-dark)}
+.btn-gallery .arr{transition:transform 0.2s;display:inline-block}
+.btn-gallery:hover .arr{transform:translateX(4px)}
+
+/* CONTACT */
+#contact{background:var(--cream-mid);padding:8rem 4rem;border-top:0.5px solid var(--rs)}
+.contact-grid{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:center}
+.contact-hl{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(3rem,5vw,5.5rem);line-height:1.02;color:var(--ink)}
+.contact-hl em{font-style:italic;color:var(--taupe)}
+.contact-rows{display:flex;flex-direction:column}
+.cr{display:flex;flex-direction:column;gap:0.35rem;padding:1.6rem 0;border-bottom:0.5px solid var(--rs)}
+.cr:first-child{padding-top:0}.cr:last-child{border-bottom:none}
+.cl{font-family:'Jost',sans-serif;font-weight:300;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--taupe-light)}
+.cv{font-family:'Jost',sans-serif;font-weight:300;font-size:0.88rem;color:var(--ink-mid);letter-spacing:0.02em}
+.cv a{color:var(--ink-mid);text-decoration:none;transition:color 0.2s}.cv a:hover{color:var(--taupe-dark)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid var(--rd)}
+.fn{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.1em;color:var(--taupe-dark)}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Zeinah's Portfolio</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#honors">Honors</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img-col">
+    <img src="images/00B9748F-B2D5-4694-9DAA-C01E17DFC637.jpg" alt="Zeinah Abdelsalam">
+    <div class="hero-img-overlay"></div>
+  </div>
+  <div class="hero-text">
+    <p class="hero-eyebrow">Policy Analyst &amp; Researcher</p>
+    <h1 class="hero-name">
+      <span class="first">ZEINAH</span>
+      <span class="last">Abdelsalam</span>
+    </h1>
+    <div class="hero-rule"></div>
+    <p class="hero-tagline">Guided by a strong sense of global citizenship.</p>
+    <p class="hero-domains">
+      Energy &amp; Environment &nbsp;·&nbsp; Critical Minerals<br>
+      Cyber &amp; National Security &nbsp;·&nbsp; Africa &amp; Emerging Markets<br>
+      Science &amp; Technology Policy
+    </p>
+    <div class="hero-cta">
+      <a href="#about" class="btn-g">Learn More <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<div class="welcome">
+  <div class="welcome-label">Welcome</div>
+  <div class="welcome-div"></div>
+  <div class="welcome-body">
+    This portfolio was thoughtfully designed to visually showcase the creative projects and skills developed over time. For a more professional, experience-based overview, the resume below offers additional insight.
+    <br><a href="resume.pdf">Download Resume</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sh dark-chrome reveal"><span class="sn">01</span><span class="st">About</span><div class="sr"></div></div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="images/90491269-a7c8-4eb7-4884-e5fdbb178d70 2.jpg" alt="Zeinah Abdelsalam">
+        <div class="about-badge">
+          <p>Georgetown University<br>M.S. Foreign Service<br>Washington, D.C.</p>
+        </div>
+      </div>
+      <div class="about-content reveal d2">
+        <h2>An international<br>scholar <em>devoted<br>to global change.</em></h2>
+        <p>Zeinah Abdelsalam is a policy analyst and researcher working at the intersection of energy security, emerging technology, and international affairs. Originally from Egypt and raised in Dubai, she moved to the United States to pursue a B.S. in Economics and Political Science at West Virginia Wesleyan College, graduating summa cum laude.</p>
+        <p>She is currently a second-year M.S. in Foreign Service candidate at Georgetown University, concentrating in the STEM-designated Science and Technology in International Affairs track with a focus on Energy and Environment, completing certificates in African Studies and Diplomatic Studies. Her work centers on the pragmatics of energy transition — examining how grid modernization, critical minerals, AI energy demand, and clean energy finance are reshaping geopolitical power dynamics across the U.S., Gulf, and Africa.</p>
+        <p>Professionally, she serves as an Energy, Tech, and Trade Policy Associate at Aquia Group and as MSFS Communications and Events Assistant at Georgetown's School of Foreign Service.</p>
+        <div class="about-meta">
+          <div class="mi"><span class="ml">Current Role</span><span class="mv">Policy Associate, Aquia Group</span></div>
+          <div class="mi"><span class="ml">Education</span><span class="mv">Georgetown MSFS · WVWC B.S. Summa Cum Laude</span></div>
+          <div class="mi"><span class="ml">Focus Areas</span><span class="mv">Energy Security · Grid Resilience · Critical Minerals · AI Governance</span></div>
+          <div class="mi"><span class="ml">Connect</span><span class="mv"><a href="https://www.linkedin.com/in/zeinah-abdelsalam/" target="_blank">LinkedIn ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sh light-chrome reveal"><span class="sn">02</span><span class="st">Education</span><div class="sr"></div></div>
+    <div class="edu-grid">
+      <div class="edu-item reveal">
+        <div class="edu-pip"><div class="edu-pip-dot"></div></div>
+        <p class="edu-degree">M.S. Foreign Service</p>
+        <p class="edu-school">Georgetown University</p>
+        <p class="edu-detail">STEM-designated Science &amp; Technology in International Affairs<br>Energy &amp; Environment Sub-concentration<br>Certificates: African Studies · Diplomatic Studies</p>
+      </div>
+      <div class="edu-item reveal d2">
+        <div class="edu-pip"><div class="edu-pip-dot"></div></div>
+        <p class="edu-degree">B.S. Economics &amp; Political Science</p>
+        <p class="edu-school">West Virginia Wesleyan College</p>
+        <p class="edu-detail">Summa Cum Laude · 4.0<br>NCAA DII Swimming<br>Outstanding Senior · Thomas Albinson Award<br>Sam Ross Scholar Athlete</p>
+      </div>
+      <div class="edu-item reveal d3">
+        <div class="edu-pip"><div class="edu-pip-dot"></div></div>
+        <p class="edu-degree">High School Diploma</p>
+        <p class="edu-school">The Westminster School, Dubai</p>
+        <p class="edu-detail">Cambridge IGCSE Curricula<br>Economics · Accounting · Business<br>Computer Science · Mathematics · Art &amp; Design</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sh dark-chrome reveal"><span class="sn">03</span><span class="st">Projects</span><div class="sr"></div></div>
+    <p class="proj-intro reveal">Select academic, professional, and creative work — organized so that whoever's reading can find what's relevant to them quickly.</p>
+    <div class="proj-grid">
+      <a href="policy-memos.html" class="proj-card reveal">
+        <div class="proj-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <p class="proj-num">01</p>
+        <h3 class="proj-title">Policy Memos</h3>
+        <p class="proj-desc">Formal memoranda to decision-makers spanning maritime decarbonization, commercial space licensing, cybersecurity, BBNJ ocean governance, and national risk strategy.</p>
+        <p class="proj-count">5 memos</p>
+        <span class="proj-cta">View collection →</span>
+      </a>
+      <a href="research.html" class="proj-card reveal d1">
+        <div class="proj-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <p class="proj-num">02</p>
+        <h3 class="proj-title">Research &amp; Analysis</h3>
+        <p class="proj-desc">Longer-form academic papers on clean energy geopolitics, critical mineral supply chains, Nigerian climate policy, Egyptian space strategy, and science &amp; technology institutions.</p>
+        <p class="proj-count">7 papers</p>
+        <span class="proj-cta">View collection →</span>
+      </a>
+      <a href="visuals.html" class="proj-card reveal d2">
+        <div class="proj-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <p class="proj-num">03</p>
+        <h3 class="proj-title">Presentations &amp; Visuals</h3>
+        <p class="proj-desc">Slide decks, design work, and creative communications projects — from energy transition ethics to critical minerals geopolitics, branding, and political campaign strategy.</p>
+        <p class="proj-count">4 projects</p>
+        <span class="proj-cta">View collection →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HONORS -->
+<section id="honors">
+  <div class="wrap">
+    <div class="sh light-chrome reveal"><span class="sn">04</span><span class="st">Select Honors &amp; Awards</span><div class="sr"></div></div>
+    <div class="hon-grid">
+      <div class="hon-item reveal"><p class="hon-year">2024–2025</p><p class="hon-title">Outstanding Senior Award</p><p class="hon-desc">Awarded to seniors with a 3.8+ GPA who exemplify academic excellence, leadership, and dedicated service to the college community.</p></div>
+      <div class="hon-item reveal d1"><p class="hon-year">2024–2025</p><p class="hon-title">Thomas Albinson Award</p><p class="hon-desc">Presented to one exceptional Albinson School of Business student for outstanding academic achievement and professional promise in economics.</p></div>
+      <div class="hon-item reveal d2"><p class="hon-year">2024–2025</p><p class="hon-title">Outstanding Leadership Award</p><p class="hon-desc">Recognizes exemplary leadership in guiding peers, driving positive change, and mobilizing campus-wide initiatives.</p></div>
+      <div class="hon-item reveal d3"><p class="hon-year">2024–2025</p><p class="hon-title">Sam Ross Scholar Athlete Award</p><p class="hon-desc">Honors a student-athlete who excels both academically and athletically, exemplifying balanced achievement and dedication.</p></div>
+      <div class="hon-item reveal"><p class="hon-year">2024–2025</p><p class="hon-title">CCE Certificate of Diplomacy</p><p class="hon-desc">Awarded for meaningful involvement, relationship-building, and advocacy within the Center for Civic Engagement.</p></div>
+      <div class="hon-item reveal d1"><p class="hon-year">2024–2025</p><p class="hon-title">Outstanding Economics Student</p><p class="hon-desc">Top-performing student for academic excellence, intellectual curiosity, and impactful contributions in economics coursework and research.</p></div>
+      <div class="hon-item reveal d2"><p class="hon-year">2024–2025</p><p class="hon-title">Outstanding Senior in Political Science</p><p class="hon-desc">Recognizes one student for academic excellence, leadership, and engagement with political systems, theory, and global affairs.</p></div>
+      <div class="hon-item reveal d3"><p class="hon-year">2024–2025</p><p class="hon-title">Outstanding Peer Leader Award</p><p class="hon-desc">Presented by the CCE for inspiring peers through leadership, initiative, and a strong commitment to social change and community impact.</p></div>
+    </div>
+    <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.68rem;color:var(--taupe-light);letter-spacing:0.1em;margin-top:2.5rem">
+      For a comprehensive list, visit <a href="https://www.linkedin.com/in/zeinah-abdelsalam/" target="_blank" style="color:var(--taupe);text-decoration:none">LinkedIn ↗</a>
+    </p>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="wrap">
+    <div class="sh dark-chrome reveal"><span class="sn">05</span><span class="st">Public Writing &amp; Press</span><div class="sr"></div></div>
+    <div class="writing-list">
+      <div class="wr reveal" style="cursor:default">
+        <span class="wr-src">Science Politics</span>
+        <span class="wr-title">"The Adversary's Forecast" — AI-enabled cyberattacks timed to extreme weather events as a compounding threat to U.S. power grid security</span>
+        <span class="wr-tag">Forthcoming</span>
+      </div>
+      <a href="https://sfs.georgetown.edu/profiles/zeinah-abdelsalam/" class="wr reveal" target="_blank">
+        <span class="wr-src">Georgetown SFS</span>
+        <span class="wr-title">Zeinah Abdelsalam — M.S. in Foreign Service Student Profile</span>
+        <span class="wr-tag">Profile</span>
+      </a>
+      <a href="https://www.wvnews.com/recorddelta/news/five-west-virginia-wesleyan-college-graduates-recognized-as-outstanding-seniors/article_f2fc5cc0-d7fc-4b9e-a5f3-3134a765e129.html" class="wr reveal" target="_blank">
+        <span class="wr-src">WV News</span>
+        <span class="wr-title">Five West Virginia Wesleyan College graduates recognized as outstanding seniors</span>
+        <span class="wr-tag">Press</span>
+      </a>
+      <a href="https://www.wvwc.edu/news/west-virginia-wesleyan-college-announces-presidents-list-provosts-list-for-spring-2025/" class="wr reveal" target="_blank">
+        <span class="wr-src">WVWC</span>
+        <span class="wr-title">West Virginia Wesleyan College Announces President's List, Provost's List For Spring 2025</span>
+        <span class="wr-tag">Press</span>
+      </a>
+      <a href="https://www.wvwc.edu/news/west-virginia-wesleyan-college-recognizes-presidents-list-provosts-list-students/" class="wr reveal" target="_blank">
+        <span class="wr-src">WVWC</span>
+        <span class="wr-title">West Virginia Wesleyan College Recognizes President's List, Provost's List Students</span>
+        <span class="wr-tag">Press</span>
+      </a>
+      <a href="https://www.wvwc.edu/news/west-virginia-wesleyan-college-announces-spring-2024-presidents-and-deans-list/" class="wr reveal" target="_blank">
+        <span class="wr-src">WVWC</span>
+        <span class="wr-title">West Virginia Wesleyan College Announces Spring 2024 President's and Dean's List</span>
+        <span class="wr-tag">Press</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sh light-chrome reveal"><span class="sn">06</span><span class="st">Creative Gallery</span><div class="sr"></div></div>
+    <p class="gallery-intro reveal">A visual thread running alongside the policy work — photography, events, and life. Evidence that curiosity doesn't stay in one lane.</p>
+    <div class="gallery-strip reveal">
+      <div class="gallery-tile">
+        <img src="images/7F2E052A-BB67-47F9-BB4B-A049584C05FB.jpg" alt="IMF World Bank Spring Meetings 2026">
+        <div class="tile-caption">
+          <span class="caption-label">Photography · Events</span>
+          <span class="caption-text">IMF/World Bank Spring Meetings, 2026</span>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="images/IMG_8808.jpg" alt="Atlantic Council Event">
+        <div class="tile-caption">
+          <span class="caption-label">Photography · Conference</span>
+          <span class="caption-text">Atlantic Council Event</span>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="images/IMG_9556.jpg" alt="AI+DC Axios Event">
+        <div class="tile-caption">
+          <span class="caption-label">Photography · Conference</span>
+          <span class="caption-text">AI+DC · Axios</span>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="images/6f056037-7c25-4045-7c78-a10f1df43c2e.jpg" alt="Georgetown MSFS">
+        <div class="tile-caption">
+          <span class="caption-label">Photography · Academic</span>
+          <span class="caption-text">Georgetown MSFS</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-footer reveal">
+      <p class="gallery-note">Photography and moments from across the journey.</p>
+      <a href="gallery.html" class="btn-gallery">View Full Gallery <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <h2 class="contact-hl reveal">Let's<br><em>Connect.</em></h2>
+    <div class="contact-rows reveal d2">
+      <div class="cr"><span class="cl">Email</span><span class="cv"><a href="mailto:zeina.msalam@gmail.com">zeina.msalam@gmail.com</a></span></div>
+      <div class="cr"><span class="cl">Georgetown</span><span class="cv"><a href="mailto:zma26@georgetown.edu">zma26@georgetown.edu</a></span></div>
+      <div class="cr"><span class="cl">Phone</span><span class="cv">+1 (304) 516-7890</span></div>
+      <div class="cr"><span class="cl">LinkedIn</span><span class="cv"><a href="https://www.linkedin.com/in/zeinah-abdelsalam/" target="_blank">linkedin.com/in/zeinah-abdelsalam ↗</a></span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="fn">© 2026 Zeinah Abdelsalam</span>
+  <span class="fn">Washington, D.C.</span>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})});
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research & Analysis — Zeinah Abdelsalam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --taupe:#9C8F82;--taupe-light:#C4B9B0;--taupe-dark:#6B5F55;
+  --cream:#F5F1EC;--cream-dark:#EDE7DF;
+  --ink:#1A1614;--ink-mid:#3D3530;--ink-light:#6B6260;
+  --white:#FDFBF9;
+  --rd:rgba(156,143,130,0.18);--rs:rgba(156,143,130,0.4);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--ink);color:var(--cream);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 4rem;background:rgba(26,22,20,0.93);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--rd)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.2rem;color:var(--cream);text-decoration:none}
+.nav-back{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--taupe);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.2s}
+.nav-back:hover{color:var(--cream)}.nav-back .arr{transition:transform 0.2s;display:inline-block}.nav-back:hover .arr{transform:translateX(-4px)}
+.page-hero{padding:10rem 4rem 6rem;background:var(--ink);position:relative;overflow:hidden}
+.page-hero::before{}
+.phi{max-width:1380px;margin:0 auto}
+.eyebrow{font-family:'Jost',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--taupe);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.eyebrow::before{content:'';width:2rem;height:0.5px;background:var(--taupe-dark)}
+.page-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(3rem,6vw,5.5rem);line-height:1.02;color:var(--cream);margin-bottom:1.5rem}
+.page-title em{font-style:italic;color:var(--taupe)}
+.page-desc{font-family:'Jost',sans-serif;font-weight:300;font-size:0.85rem;color:rgba(156,143,130,0.6);line-height:1.8;max-width:44rem;margin-bottom:2.5rem}
+.page-meta{display:flex;gap:3rem}
+.pmi{display:flex;flex-direction:column;gap:0.3rem}
+.pml{font-family:'Jost',sans-serif;font-weight:300;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--taupe-dark)}
+.pmv{font-family:'Jost',sans-serif;font-weight:400;font-size:0.8rem;color:var(--taupe-light)}
+.content{padding:6rem 4rem;max-width:1380px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.card{background:rgba(156,143,130,0.06);border:0.5px solid var(--rd);overflow:hidden;display:flex;flex-direction:column;position:relative;transition:background 0.28s,transform 0.2s}
+.card:hover{background:rgba(156,143,130,0.1);transform:translateY(-2px)}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--taupe);transform:scaleY(0);transform-origin:top;transition:transform 0.3s}.card:hover::before{transform:scaleY(1)}
+.card-top{background:rgba(156,143,130,0.08);padding:1.8rem 2.5rem;display:flex;align-items:center;gap:1.5rem;border-bottom:0.5px solid var(--rd)}
+.cicon{width:44px;height:44px;border-radius:50%;border:0.5px solid rgba(156,143,130,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cicon svg{width:20px;height:20px;stroke:var(--taupe-light);fill:none;stroke-width:1.2}
+.cmeta{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.1em;color:var(--taupe);line-height:1.7}
+.cmeta strong{display:block;color:var(--taupe-dark);font-weight:200;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.15rem}
+.cbody{padding:2rem 2.5rem;flex:1;display:flex;flex-direction:column}
+.cdate{font-family:'Jost',sans-serif;font-weight:200;font-size:0.6rem;letter-spacing:0.2em;color:var(--taupe-dark);margin-bottom:0.75rem}
+.ctitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.4rem;color:var(--cream);line-height:1.2;margin-bottom:0.75rem}
+.csubj{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;color:var(--taupe);letter-spacing:0.06em;margin-bottom:1.2rem;font-style:italic}
+.csum{font-family:'Jost',sans-serif;font-weight:300;font-size:0.78rem;color:rgba(196,185,176,0.6);line-height:1.75;margin-bottom:1.5rem;flex:1}
+.ctags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem}
+.tag{font-family:'Jost',sans-serif;font-weight:300;font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--taupe-dark);border:0.5px solid var(--rd);padding:0.22rem 0.65rem}
+.cfoot{padding:1.2rem 2.5rem;border-top:0.5px solid var(--rd);display:flex;align-items:center;justify-content:space-between}
+.cdl{font-family:'Jost',sans-serif;font-weight:400;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.6rem 1.4rem;text-decoration:none;transition:all 0.2s}
+.cdl.live{color:var(--ink);background:var(--taupe-light)}.cdl.live:hover{background:var(--cream)}
+.cdl.ph{color:var(--taupe-dark);border:0.5px solid var(--rd);background:transparent}.cdl.ph:hover{border-color:var(--taupe-dark);color:var(--taupe-light)}
+.cref{font-family:'Jost',sans-serif;font-weight:300;font-size:0.6rem;letter-spacing:0.12em;color:var(--taupe-dark)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid var(--rd)}
+.fn{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.1em;color:var(--taupe-dark)}
+.fn a{color:var(--taupe-dark);text-decoration:none;transition:color 0.2s}.fn a:hover{color:var(--taupe)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Zeinah's Portfolio</a>
+  <a href="index.html#projects" class="nav-back"><span class="arr">←</span> Back to Projects</a>
+</nav>
+
+<div class="page-hero">
+  <div class="phi">
+    <p class="eyebrow">Projects · 02</p>
+    <h1 class="page-title">Research &amp;<br><em>Analysis</em></h1>
+    <p class="page-desc">Longer-form academic papers examining clean energy geopolitics, critical mineral supply chains, climate policy in emerging economies, space strategy, and science &amp; technology governance — written for Georgetown MSFS coursework and independent research.</p>
+  </div>
+</div>
+</div>
+
+<div class="content">
+  <div class="cards">
+
+    <!-- Age of Climate Pragmatism -->
+    <div class="card reveal">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="cmeta"><strong>Course</strong>International Relations · MSFS-5001</div>
+      </div>
+      <div class="cbody">
+        <p class="cdate">December 12, 2025</p>
+        <h3 class="ctitle">The Age of Climate Pragmatism: A Strategy for Resilient Clean Energy Geopolitics</h3>
+        <p class="csubj">Energy addition vs. transition · COP30 · U.S.-China rivalry</p>
+        <p class="csum">Argues that the dominant "energy transition" frame is being displaced by a pragmatic logic of energy addition — where states pursue clean energy not to replace fossil fuels but to supplement them. Examines how COP30 and U.S.-China strategic competition are reshaping the architecture of global climate governance and what a resilient American strategy looks like in that context.</p>
+        <div class="ctags"><span class="tag">Clean Energy</span><span class="tag">Geopolitics</span><span class="tag">COP30</span><span class="tag">U.S.-China</span><span class="tag">Climate Strategy</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/climate-pragmatism.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">MSFS-5001</span>
+      </div>
+    </div>
+
+    <!-- Critical Minerals -->
+    <div class="card reveal d1">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <div class="cmeta"><strong>Course</strong>History of Globalization · MSFS-5002</div>
+      </div>
+      <div class="cbody">
+        <p class="cdate">December 14, 2025</p>
+        <h3 class="ctitle">Critical Minerals as the Organizing Logic of Contemporary Globalization</h3>
+        <p class="csubj">China · Geopolitics of Resource Control · Technology</p>
+        <p class="csum">Argues that control over critical mineral supply chains — not trade in goods or capital flows — has become the organizing logic of contemporary globalization. Examines China's midstream dominance in processing and refining, the resulting asymmetries for Africa and Latin America, and what a coherent U.S. response to resource geopolitics requires.</p>
+        <div class="ctags"><span class="tag">Critical Minerals</span><span class="tag">China</span><span class="tag">Supply Chains</span><span class="tag">Africa</span><span class="tag">Latin America</span><span class="tag">Trade</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/critical-minerals.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">MSFS-5002</span>
+      </div>
+    </div>
+
+    <!-- Nigerian Climate Policy -->
+    <div class="card reveal d2">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+      </div>
+      <div class="cbody">
+        <p class="cdate">March 26, 2026</p>
+        <h3 class="ctitle">Nigerian Climate Policy Report &amp; Recommendation</h3>
+        <p class="csubj">Decentralized Solar Electrification · NDC 3.0 · Energy Poverty</p>
+        <p class="csum">Analyzes the gap between Nigeria's fossil fuel wealth and its 39% off-grid household rate. Reviews NDC 3.0 commitments (net-zero by 2060, 52% renewable electricity by 2030) and the $337B finance gap. Recommends scaling up decentralized solar through the Rural Electrification Agency's Solar Power Naija program as the highest-impact near-term intervention.</p>
+        <div class="ctags"><span class="tag">Nigeria</span><span class="tag">Climate Policy</span><span class="tag">Solar Energy</span><span class="tag">Africa</span><span class="tag">NDC</span><span class="tag">Energy Poverty</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/nigerian-climate-policy.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
+      </div>
+    </div>
+
+    <!-- Egyptian Space Policy -->
+    <div class="card reveal d3">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke-dasharray="3 3"/><path d="M12 6a6 6 0 100 12A6 6 0 0012 6z"/></svg></div>
+        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+      </div>
+      <div class="cbody">
+        <p class="cdate">Fall 2025</p>
+        <h3 class="ctitle">Egyptian Space Policy</h3>
+        <p class="csubj">Satellite Sovereignty · AfSA · China-led ILRS · Regional Leadership</p>
+        <p class="csum">Examines Egypt's primary space objective — localizing satellite technology to achieve self-reliance and reduce dependence on foreign contractors — alongside its role as host of the African Space Agency headquarters and participant in China's International Lunar Research Station project. Assesses how space fits within Egypt's broader science-security priorities.</p>
+        <div class="ctags"><span class="tag">Egypt</span><span class="tag">Space Policy</span><span class="tag">AfSA</span><span class="tag">China</span><span class="tag">ILRS</span><span class="tag">Africa</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/egyptian-space-policy.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
+      </div>
+    </div>
+
+    <!-- Egypt S&T Institutions -->
+    <div class="card reveal">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+      </div>
+      <div class="cbody">
+        <p class="cdate">Fall 2025</p>
+        <h3 class="ctitle">Egypt's Science &amp; Technology Institutions</h3>
+        <p class="csubj">MOHESR · MCIT · NCAI · Digital Egypt · AI Governance</p>
+        <p class="csum">Maps Egypt's centralized yet multi-layered S&amp;T institutional framework — covering the Ministry of Higher Education and Scientific Research, the Ministry of Communications and Information Technology, the National Council for Artificial Intelligence, and the Academy of Scientific Research and Technology. Argues that S&amp;T is treated as a high-level priority, albeit secondary to short-term security imperatives.</p>
+        <div class="ctags"><span class="tag">Egypt</span><span class="tag">S&amp;T Policy</span><span class="tag">AI Governance</span><span class="tag">Digital Egypt</span><span class="tag">Institutional Analysis</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/egypt-st-institutions.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
+      </div>
+    </div>
+
+    <!-- POLS Thesis -->
+    <div class="card reveal d1">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <div class="cmeta"><strong>Undergraduate Thesis</strong>West Virginia Wesleyan College · Department of Social Sciences · 2025</div>
+      </div>
+      <div class="cbody">
+        <p class="cdate">2024–2025</p>
+        <h3 class="ctitle">The Impact of Mainstream News Consumption on Individual Opinions Toward Arabs</h3>
+        <p class="csubj">Quantitative Analysis · Media Influence · Attitude Formation</p>
+        <p class="csum">Funded undergraduate research project exploring how different media sources — television news, print, and social media — influence American attitudes toward Arabs. Tests the hypothesis that increased television news consumption is associated with more negative attitudes, while considering the moderating role of other media forms. Full thesis and research proposal available for download.</p>
+        <div class="ctags"><span class="tag">Political Science</span><span class="tag">Quantitative Research</span><span class="tag">Media Studies</span><span class="tag">Arab Representation</span><span class="tag">Attitude Formation</span></div>
+      </div>
+      <div class="cfoot">
+        <!-- DOWNLOAD: These PDFs are already on your Wix site — grab the URL from the Wix media manager -->
+        <a href="pdfs/pols-thesis.pdf" class="cdl live">Download Thesis</a>
+        <a href="pdfs/pols-thesis-proposal.pdf" class="cdl live" style="background:transparent;color:var(--taupe-light);border:0.5px solid var(--rd)">Research Proposal</a>
+        <span class="cref">West Virginia Wesleyan College · Department of Social Sciences · 2025</span>
+      </div>
+    </div>
+
+    <!-- ECON Thesis — full width -->
+    <div class="card reveal" style="grid-column:1/-1">
+      <div class="card-top">
+        <div class="cicon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="cmeta"><strong>Undergraduate Thesis</strong>West Virginia Wesleyan College · Albinson School of Business · 2025</div>
+      </div>
+      <div class="cbody" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem">
+        <div>
+          <p class="cdate">2024–2025</p>
+          <h3 class="ctitle">The Impact of Foreign Aid on GDP Growth in Developing Nations</h3>
+          <p class="csubj">Quantitative Analysis · Development Economics · Cross-Border Finance</p>
+          <p class="csum">Quantitative study examining the causal relationship between foreign aid flows and GDP growth across developing nations. Investigates whether aid promotes sustainable economic growth or creates dependency, with implications for international development policy and donor strategy.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:flex-end">
+          <div class="ctags"><span class="tag">Economics</span><span class="tag">Development Finance</span><span class="tag">Foreign Aid</span><span class="tag">GDP Growth</span><span class="tag">Quantitative Research</span><span class="tag">Developing Nations</span></div>
+        </div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/econ-thesis.pdf" class="cdl live">Download Thesis</a>
+        <span class="cref">West Virginia Wesleyan College · Albinson School of Business · 2025</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:5rem;padding-top:2rem;border-top:0.5px solid var(--rd)">
+    <a href="index.html#projects" style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--taupe-dark);text-decoration:none;display:inline-flex;align-items:center;gap:0.6rem;transition:color 0.2s" onmouseover="this.style.color='var(--taupe)'" onmouseout="this.style.color='var(--taupe-dark)'">← All Projects</a>
+  </div>
+</div>
+
+<footer>
+  <span class="fn">© 2026 Zeinah Abdelsalam</span>
+  <span class="fn"><a href="index.html">← Home</a></span>
+</footer>
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.06});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
