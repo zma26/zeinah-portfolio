@@ -46,6 +46,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cmeta{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.1em;color:var(--taupe);line-height:1.7}
 .cmeta strong{display:block;color:var(--taupe-dark);font-weight:200;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.15rem}
 .cbody{padding:2rem 2.5rem;flex:1;display:flex;flex-direction:column}
+.cbody-two-col{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
 .cdate{font-family:'Jost',sans-serif;font-weight:200;font-size:0.6rem;letter-spacing:0.2em;color:var(--taupe-dark);margin-bottom:0.75rem}
 .ctitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.4rem;color:var(--cream);line-height:1.2;margin-bottom:0.75rem}
 .csubj{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;color:var(--taupe);letter-spacing:0.06em;margin-bottom:1.2rem;font-style:italic}
@@ -69,6 +70,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
 
 
 
+
 @media(max-width:768px){
   nav{padding:1.2rem 1.5rem}
   .nav-links{gap:1rem}
@@ -76,16 +78,18 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
   .page-hero{padding:7rem 1.5rem 4rem}
   .page-title{font-size:clamp(2rem,9vw,3.2rem)}
   .page-desc{font-size:0.78rem}
-  .content{padding:0}
-  .cards{display:flex !important;flex-direction:column !important;gap:1.5rem;padding:2.5rem 1.5rem 5rem}
-  .card{width:100% !important;grid-column:unset !important}
+  .content{padding:0 1.5rem 5rem}
+  .cards{display:block !important}
+  .card{width:100% !important;margin-bottom:1.5rem;grid-column:unset !important}
   .card-top{padding:1.2rem 1.5rem}
-  .cbody{padding:1.5rem;flex-direction:column !important;display:flex !important}
-  .cbody > div{padding-left:0 !important;border-left:none !important;grid-template-columns:unset !important}
-  .ctitle{font-size:1.15rem}
+  .cbody{padding:1.5rem !important}
+  .cbody-two-col{display:block !important;columns:unset !important}
+  .cbody-two-col > div{padding-left:0 !important;border-left:none !important;margin-bottom:1.5rem}
+  .ctitle{font-size:1.1rem !important}
   .csum{font-size:0.75rem}
-  .cfoot{padding:1.2rem 1.5rem;flex-wrap:wrap;gap:0.6rem}
-  .preview{height:160px}
+  .cfoot{padding:1rem 1.5rem;flex-wrap:wrap;gap:0.6rem}
+  .cdl{font-size:0.6rem;padding:0.55rem 1rem}
+  .preview{height:150px}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
 }
 </style>
@@ -173,7 +177,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
         <div class="cicon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <div class="cmeta"><strong>Undergraduate Thesis</strong>West Virginia Wesleyan College · Albinson School of Business · 2025</div>
       </div>
-      <div class="cbody" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem">
+      <div class="cbody" class="cbody-two-col">
         <div>
           <p class="cdate">2024–2025</p>
           <h3 class="ctitle">The Impact of Foreign Aid on GDP Growth in Developing Nations</h3>
