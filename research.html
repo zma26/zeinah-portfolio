@@ -67,28 +67,26 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
 
 }
 
+
+
 @media(max-width:768px){
   nav{padding:1.2rem 1.5rem}
   .nav-links{gap:1rem}
   .nav-links a{font-size:0.58rem;letter-spacing:0.1em}
   .page-hero{padding:7rem 1.5rem 4rem}
-  .page-title{font-size:clamp(2.2rem,10vw,3.5rem)}
-  .page-desc{font-size:0.8rem}
-  .cards{grid-template-columns:1fr !important;padding:2.5rem 1.5rem 5rem}
-  .card{padding:0 !important}
-  .card-top{padding:1.4rem 1.5rem}
-  .cbody{padding:1.5rem !important;display:flex !important;flex-direction:column !important;grid-template-columns:unset !important}
-  .cbody > div{padding-left:0 !important;border-left:none !important}
-  .ctitle{font-size:1.2rem}
+  .page-title{font-size:clamp(2rem,9vw,3.2rem)}
+  .page-desc{font-size:0.78rem}
+  .content{padding:0}
+  .cards{display:flex !important;flex-direction:column !important;gap:1.5rem;padding:2.5rem 1.5rem 5rem}
+  .card{width:100% !important;grid-column:unset !important}
+  .card-top{padding:1.2rem 1.5rem}
+  .cbody{padding:1.5rem;flex-direction:column !important;display:flex !important}
+  .cbody > div{padding-left:0 !important;border-left:none !important;grid-template-columns:unset !important}
+  .ctitle{font-size:1.15rem}
   .csum{font-size:0.75rem}
-  .cfoot{flex-wrap:wrap;gap:0.75rem;padding:1.2rem 1.5rem}
-  .cdl{font-size:0.6rem;padding:0.6rem 1.2rem}
+  .cfoot{padding:1.2rem 1.5rem;flex-wrap:wrap;gap:0.6rem}
   .preview{height:160px}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
-}
-@media(max-width:480px){
-  .page-title{font-size:clamp(1.8rem,12vw,2.8rem)}
-  .nav-links a{font-size:0.52rem}
 }
 </style>
 </head>
@@ -145,63 +143,6 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
       <div class="cfoot">
         <a href="pdfs/critical-minerals.pdf" class="cdl live">Download Paper</a>
         <span class="cref">MSFS-5002</span>
-      </div>
-    </div>
-
-    <!-- Nigerian Climate Policy -->
-    <div class="card reveal d2">
-      <div class="card-top">
-        <div class="cicon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
-      </div>
-      <div class="cbody">
-        <p class="cdate">March 26, 2026</p>
-        <h3 class="ctitle">Nigerian Climate Policy Report &amp; Recommendation</h3>
-        <p class="csubj">Decentralized Solar Electrification · NDC 3.0 · Energy Poverty</p>
-        <p class="csum">Analyzes the gap between Nigeria's fossil fuel wealth and its 39% off-grid household rate. Reviews NDC 3.0 commitments (net-zero by 2060, 52% renewable electricity by 2030) and the $337B finance gap. Recommends scaling up decentralized solar through the Rural Electrification Agency's Solar Power Naija program as the highest-impact near-term intervention.</p>
-        <div class="ctags"><span class="tag">Nigeria</span><span class="tag">Climate Policy</span><span class="tag">Solar Energy</span><span class="tag">Africa</span><span class="tag">NDC</span><span class="tag">Energy Poverty</span></div>
-      </div>
-      <div class="cfoot">
-        <a href="pdfs/nigerian-climate-policy.pdf" class="cdl live">Download Paper</a>
-        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
-      </div>
-    </div>
-
-    <!-- Egyptian Space Policy -->
-    <div class="card reveal d3">
-      <div class="card-top">
-        <div class="cicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke-dasharray="3 3"/><path d="M12 6a6 6 0 100 12A6 6 0 0012 6z"/></svg></div>
-        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
-      </div>
-      <div class="cbody">
-        <p class="cdate">Fall 2025</p>
-        <h3 class="ctitle">Egyptian Space Policy</h3>
-        <p class="csubj">Satellite Sovereignty · AfSA · China-led ILRS · Regional Leadership</p>
-        <p class="csum">Examines Egypt's primary space objective — localizing satellite technology to achieve self-reliance and reduce dependence on foreign contractors — alongside its role as host of the African Space Agency headquarters and participant in China's International Lunar Research Station project. Assesses how space fits within Egypt's broader science-security priorities.</p>
-        <div class="ctags"><span class="tag">Egypt</span><span class="tag">Space Policy</span><span class="tag">AfSA</span><span class="tag">China</span><span class="tag">ILRS</span><span class="tag">Africa</span></div>
-      </div>
-      <div class="cfoot">
-        <a href="pdfs/egyptian-space-policy.pdf" class="cdl live">Download Paper</a>
-        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
-      </div>
-    </div>
-
-    <!-- Egypt S&T Institutions -->
-    <div class="card reveal">
-      <div class="card-top">
-        <div class="cicon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
-      </div>
-      <div class="cbody">
-        <p class="cdate">Fall 2025</p>
-        <h3 class="ctitle">Egypt's Science &amp; Technology Institutions</h3>
-        <p class="csubj">MOHESR · MCIT · NCAI · Digital Egypt · AI Governance</p>
-        <p class="csum">Maps Egypt's centralized yet multi-layered S&amp;T institutional framework — covering the Ministry of Higher Education and Scientific Research, the Ministry of Communications and Information Technology, the National Council for Artificial Intelligence, and the Academy of Scientific Research and Technology. Argues that S&amp;T is treated as a high-level priority, albeit secondary to short-term security imperatives.</p>
-        <div class="ctags"><span class="tag">Egypt</span><span class="tag">S&amp;T Policy</span><span class="tag">AI Governance</span><span class="tag">Digital Egypt</span><span class="tag">Institutional Analysis</span></div>
-      </div>
-      <div class="cfoot">
-        <a href="pdfs/egypt-st-institutions.pdf" class="cdl live">Download Paper</a>
-        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
       </div>
     </div>
 

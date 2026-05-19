@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Policy Memos — Zeinah Abdelsalam</title>
+<title>Policy Memos &amp; Briefs — Zeinah Abdelsalam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -70,28 +70,26 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
 
 }
 
+
+
 @media(max-width:768px){
   nav{padding:1.2rem 1.5rem}
   .nav-links{gap:1rem}
   .nav-links a{font-size:0.58rem;letter-spacing:0.1em}
   .page-hero{padding:7rem 1.5rem 4rem}
-  .page-title{font-size:clamp(2.2rem,10vw,3.5rem)}
-  .page-desc{font-size:0.8rem}
-  .cards{grid-template-columns:1fr !important;padding:2.5rem 1.5rem 5rem}
-  .card{padding:0 !important}
-  .card-top{padding:1.4rem 1.5rem}
-  .cbody{padding:1.5rem !important;display:flex !important;flex-direction:column !important;grid-template-columns:unset !important}
-  .cbody > div{padding-left:0 !important;border-left:none !important}
-  .ctitle{font-size:1.2rem}
+  .page-title{font-size:clamp(2rem,9vw,3.2rem)}
+  .page-desc{font-size:0.78rem}
+  .content{padding:0}
+  .cards{display:flex !important;flex-direction:column !important;gap:1.5rem;padding:2.5rem 1.5rem 5rem}
+  .card{width:100% !important;grid-column:unset !important}
+  .card-top{padding:1.2rem 1.5rem}
+  .cbody{padding:1.5rem;flex-direction:column !important;display:flex !important}
+  .cbody > div{padding-left:0 !important;border-left:none !important;grid-template-columns:unset !important}
+  .ctitle{font-size:1.15rem}
   .csum{font-size:0.75rem}
-  .cfoot{flex-wrap:wrap;gap:0.75rem;padding:1.2rem 1.5rem}
-  .cdl{font-size:0.6rem;padding:0.6rem 1.2rem}
+  .cfoot{padding:1.2rem 1.5rem;flex-wrap:wrap;gap:0.6rem}
   .preview{height:160px}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
-}
-@media(max-width:480px){
-  .page-title{font-size:clamp(1.8rem,12vw,2.8rem)}
-  .nav-links a{font-size:0.52rem}
 }
 </style>
 </head>
@@ -104,7 +102,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
 <div class="page-hero">
   <div class="phi">
     <p class="eyebrow">Projects · 01</p>
-    <h1 class="page-title">Policy<br><em>Memos</em></h1>
+    <h1 class="page-title">Policy Memos<br><em>&amp; Briefs</em></h1>
     <p class="page-desc">Formal memoranda to senior decision-makers spanning energy diplomacy, maritime decarbonization, commercial space governance, cybersecurity policy, ocean biodiversity, and national security risk strategy.</p>
   </div>
 </div>
@@ -211,6 +209,63 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
         <a href="pdfs/presidential-debate-memo.pdf" class="cdl live">Download Memo</a>
         <span class="cref">MSFS-7545-01</span>
       </div>
+      </div>
+    </div>
+
+
+    <!-- SECTION DIVIDER -->
+    <div style="grid-column:1/-1;padding-top:2rem;border-top:0.5px solid var(--rd);margin-top:1rem">
+      <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--taupe-dark)">Policy Briefs</p>
+    </div>
+
+    <!-- Nigerian Climate Policy -->
+    <div class="card reveal">
+      <div class="card-top">
+        <div class="cnum">06</div>
+        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+      </div>
+      <div class="cbody">
+        <h3 class="ctitle">Nigeria's Climate Policy: Between Ambition and Implementation</h3>
+        <p class="csum">Analyzes Nigeria's climate commitments and the structural gaps between policy ambition and on-the-ground implementation — examining institutional capacity, hydrocarbon dependency, and what a just energy transition looks like for Africa's largest economy.</p>
+        <div class="ctags"><span class="tag">Nigeria</span><span class="tag">Climate Policy</span><span class="tag">Africa</span><span class="tag">Energy Transition</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/nigerian-climate-policy.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
+      </div>
+    </div>
+
+    <!-- Egyptian Space Policy -->
+    <div class="card reveal d1">
+      <div class="card-top">
+        <div class="cnum">07</div>
+        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+      </div>
+      <div class="cbody">
+        <h3 class="ctitle">Egypt's Emerging Space Policy: Strategic Ambitions in a Contested Domain</h3>
+        <p class="csum">Examines Egypt's growing investment in space capabilities — from satellite development to regional positioning — and evaluates the strategic rationale, institutional framework, and geopolitical implications of Cairo's space ambitions within a contested global domain.</p>
+        <div class="ctags"><span class="tag">Egypt</span><span class="tag">Space Policy</span><span class="tag">SWANA</span><span class="tag">Emerging Technologies</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/egyptian-space-policy.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
+      </div>
+    </div>
+
+    <!-- Egypt S&T Institutions -->
+    <div class="card reveal d2">
+      <div class="card-top">
+        <div class="cnum">08</div>
+        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+      </div>
+      <div class="cbody">
+        <h3 class="ctitle">Egypt's Science &amp; Technology Institutions: Capacity, Gaps, and Reform Pathways</h3>
+        <p class="csum">Surveys Egypt's science and technology institutional landscape — assessing research capacity, funding structures, and the barriers to translating scientific output into economic and strategic value — with recommendations for reform aligned with Egypt Vision 2030.</p>
+        <div class="ctags"><span class="tag">Egypt</span><span class="tag">S&amp;T Policy</span><span class="tag">Institutions</span><span class="tag">SWANA</span></div>
+      </div>
+      <div class="cfoot">
+        <a href="pdfs/egypt-st-institutions.pdf" class="cdl live">Download Paper</a>
+        <span class="cref">Science Policy Matters · MSFS-5500-02</span>
       </div>
     </div>
 
