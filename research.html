@@ -92,6 +92,15 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
   .preview{height:150px}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
 }
+
+@media(max-width:768px){
+  div[style*="grid-template-columns:1fr 1fr"]{
+    display:block !important;
+  }
+  div[style*="grid-template-columns:1fr 1fr"] .card{
+    margin-bottom:1.5rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -150,6 +159,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
       </div>
     </div>
 
+    <div style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
     <!-- POLS Thesis -->
     <div class="card reveal d1">
       <div class="card-top">
@@ -171,8 +181,8 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
       </div>
     </div>
 
-    <!-- ECON Thesis — full width -->
-    <div class="card reveal" style="grid-column:1/-1">
+    <!-- ECON Thesis -->
+    <div class="card reveal">
       <div class="card-top">
         <div class="cicon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <div class="cmeta"><strong>Undergraduate Thesis</strong>West Virginia Wesleyan College · Albinson School of Business · 2025</div>
@@ -193,6 +203,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
         <span class="cref">West Virginia Wesleyan College · Albinson School of Business · 2025</span>
       </div>
     </div>
+    </div><!-- end thesis grid -->
 
   </div>
 </div>

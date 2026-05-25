@@ -95,6 +95,15 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
   .preview{height:150px}
   footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
 }
+
+@media(max-width:768px){
+  div[style*="grid-template-columns:1fr 1fr"]{
+    display:block !important;
+  }
+  div[style*="grid-template-columns:1fr 1fr"] .card{
+    margin-bottom:1.5rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -215,18 +224,12 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
       </div>
       </div>
     </div>
-
-
-    <!-- SECTION DIVIDER -->
-    <div style="grid-column:1/-1;padding-top:2rem;border-top:0.5px solid var(--rd);margin-top:1rem">
-      <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--taupe-dark)">Policy Briefs</p>
-    </div>
-
+    <div style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
     <!-- Nigerian Climate Policy -->
     <div class="card reveal">
       <div class="card-top">
         <div class="cnum">06</div>
-        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+        <div class="cmeta"><strong>Course</strong> Science Policy Matters · MSFS-5500-02</div>
       </div>
       <div class="cbody">
         <h3 class="ctitle">Nigeria's Climate Policy: Between Ambition and Implementation</h3>
@@ -243,7 +246,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
     <div class="card reveal d1">
       <div class="card-top">
         <div class="cnum">07</div>
-        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+        <div class="cmeta"><strong>Course</strong> Science Policy Matters · MSFS-5500-02</div>
       </div>
       <div class="cbody">
         <h3 class="ctitle">Egypt's Emerging Space Policy: Strategic Ambitions in a Contested Domain</h3>
@@ -260,10 +263,10 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
     <div class="card reveal d2">
       <div class="card-top">
         <div class="cnum">08</div>
-        <div class="cmeta"><strong>Course</strong>Science Policy Matters · MSFS-5500-02</div>
+        <div class="cmeta"><strong>Course</strong> Science Policy Matters · MSFS-5500-02</div>
       </div>
       <div class="cbody">
-        <h3 class="ctitle">Egypt's Science &amp; Technology Institutions: Capacity, Gaps, and Reform Pathways</h3>
+        <h3 class="ctitle">Egypt's Science &amp; Technology Institutions</h3>
         <p class="csum">Surveys Egypt's science and technology institutional landscape — assessing research capacity, funding structures, and the barriers to translating scientific output into economic and strategic value — with recommendations for reform aligned with Egypt Vision 2030.</p>
         <div class="ctags"><span class="tag">Egypt</span><span class="tag">S&amp;T Policy</span><span class="tag">Institutions</span><span class="tag">SWANA</span></div>
       </div>
@@ -272,6 +275,7 @@ footer{background:var(--ink);padding:1.8rem 4rem;display:flex;align-items:center
         <span class="cref">Science Policy Matters · MSFS-5500-02</span>
       </div>
     </div>
+    </div><!-- end briefs grid -->
 
   </div>
 </div>
